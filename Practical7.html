@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>WebPage Layout</title>
+    <style>
+        body {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+        
+        #page_box {
+            border: 10px solid whitesmoke;
+            display: block;
+            width: fit-content;
+            padding: 7px;
+            margin: auto;
+        }
+        
+        #header_box {
+            border: solid;
+            text-align: center;
+            background-color: grey;
+            display: block;
+            width: 1000px;
+            height: 50px;
+            line-height: 50px;
+        }
+        
+        #banner_box {
+            border: solid;
+            text-align: center;
+            background-color: skyblue;
+            height: 400px;
+            display: block;
+            width: 1000px;
+            line-height: 400px;
+        }
+        
+        h3 {
+            text-align: center;
+            color: black;
+        }
+        
+        #circle {
+            height: 200px;
+            width: 200px;
+            background-color: #bbb;
+            border-radius: 50%;
+            margin: 25px;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="page_box">
+        <div class="header" id="header_box">
+            Header
+        </div>
+        <div class="banner" id="banner_box">
+            Banner
+        </div>
+        <h3>Section-1</h3>
+        <div class="circles" id="circle"></div>
+        <div class="circles" id="circle"></div>
+        <div class="circles" id="circle"></div>
+        <div class="circles" id="circle"></div>
+        <h3>Section-2</h3>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #container {
+            border: solid;
+            width: 1200px;
+        }
+        
+        #header {
+            background-color: grey;
+            height: 70px;
+            width: 100%;
+            border-radius: 15px;
+            /*content to center */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 40px;
+        }
+        
+        #content {
+            border: 5px red solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">Header</div>
+        <div id="content">
+            <div id="nav">Navigation</div>
+            <div id="news">News Updates</div>
+        </div>
+        <div id="right-sidebar">Main Content</div>
+        <div id="footer"></div>
+    </div>
+</body>
+
+</html>
