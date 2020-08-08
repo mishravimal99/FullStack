@@ -8,12 +8,12 @@
     <style>
         body {
             color: white;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
         }
         
         #page_box {
-            border: 10px solid whitesmoke;
+            border: 10px solid rgb(252, 245, 234);
             display: block;
             width: fit-content;
             padding: 7px;
@@ -41,6 +41,7 @@
         }
         
         h3 {
+            margin: 10px;
             text-align: center;
             color: black;
         }
@@ -52,6 +53,65 @@
             border-radius: 50%;
             margin: 25px;
             float: left;
+        }
+        
+        .Section-2 {
+            height: 520px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        
+        #maincontent {
+            height: 500px;
+            width: 48%;
+            background-color: gray;
+            line-height: 500px;
+            text-align: center;
+            float: left;
+            flex-direction: column;
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .article {
+            height: 160px;
+            background-color: orange;
+            width: 48%;
+            display: flex;
+            margin-bottom: 10px;
+            flex-direction: column;
+            float: right;
+            line-height: 160px;
+            text-align: center;
+        }
+        
+        #boxes {
+            height: 300px;
+            display: flex;
+            width: 20%;
+            float: left;
+            flex-direction: column;
+            background-color: red;
+            margin-left: 35px;
+            margin-bottom: 20px;
+        }
+        
+        .Section-3 {
+            width: 100%;
+        }
+        
+        #footer_box {
+            text-align: center;
+            background-color: pink;
+            display: block;
+            width: 1000px;
+            height: 50px;
+            line-height: 50px;
+        }
+        
+        p {
+            text-align: center;
+            color: black;
         }
     </style>
 </head>
@@ -70,6 +130,26 @@
         <div class="circles" id="circle"></div>
         <div class="circles" id="circle"></div>
         <h3>Section-2</h3>
+        <div class="Section-2">
+            <div class="main content" id="maincontent">
+                Main Content
+            </div>
+            <div class="article">Article 1</div>
+            <div class="article">Article 2</div>
+            <div class="article">Article 3</div>
+        </div>
+        <p style="visibility: hidden;font-size: 1px;">Section-3</p>
+        <h3>Section-3</h3>
+        <div class="Section-3">
+            <div class="section3box" id="boxes"></div>
+            <div class="section3box" id="boxes"></div>
+            <div class="section3box" id="boxes"></div>
+            <div class="section3box" id="boxes"></div>
+        </div>
+        <h3>Section-4</h3>
+        <div class="footer" id="footer_box">
+            Footer
+        </div>
     </div>
 </body>
 
