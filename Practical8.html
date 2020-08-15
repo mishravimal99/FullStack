@@ -22,7 +22,7 @@
         width: 100%;
         padding: 0;
         overflow: hidden;
-        background-color: grey;
+        background-color: black;
         position: sticky;
         top: 0;
         justify-content: center;
@@ -36,6 +36,7 @@
     #navbar ul li {
         display: inline-block;
         float: left;
+        padding: 20px;
         margin: 25px auto;
         text-decoration: none;
     }
@@ -165,6 +166,92 @@
         text-align: center;
         font-size: 40px;
     }
+    
+    #box1 {
+        width: 20%;
+        margin: 36px 18px;
+        padding: 15px;
+        background-color: white;
+        border-radius: 8px;
+        float: left;
+        height: 490px;
+    }
+    
+    body {
+        background-color: lightgrey;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+    }
+    
+    .box img {
+        width: 100%;
+        height: 180px;
+        border-radius: 8px;
+    }
+    
+    .box p {
+        color: black;
+        font-size: 20px;
+    }
+    
+    .buttontype {
+        background-color: red;
+        color: white;
+        border: 2px solid red;
+        border-radius: 8px;
+        height: 30px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        display: inline-block;
+        padding: 10px 0px;
+        width: 100%;
+        margin: 10px auto;
+    }
+    
+    .box a:hover {
+        background-color: skyblue;
+        border-color: skyblue;
+        color: black;
+    }
+    
+    .box h4 {
+        color: black;
+        text-align: center;
+        margin: 15px 10px;
+    }
+    
+    .technology h2 {
+        color: black;
+        font-family: sans-serif;
+        font-weight: bold;
+        text-align: center;
+        font-size: 40px;
+    }
+    
+    .contact h2 {
+        color: black;
+        font-family: sans-serif;
+        font-weight: bold;
+        text-align: center;
+        font-size: 40px;
+    }
+    
+    #footer h6 {
+        text-align: center;
+        font-size: 15px;
+        border: solid pink;
+        height: 100px;
+        width: 98%;
+        background-color: pink;
+        margin-top: 30px;
+    }
+    
+    #footer a {
+        font-size: 15px;
+        text-decoration: underline;
+        color: black;
+    }
 </style>
 
 <body>
@@ -174,8 +261,8 @@
                 <li><a href="#HOME">HOME</a></li>
                 <li><a href="#about">ABOUT US</a></li>
                 <li><a href="#teamxp">TEAM</a></li>
-                <li><a href="/library">TECHNOLOGIES</a></li>
-                <li><a href="/testimonials">CONTACT US</a></li>
+                <li><a href="#techno">TECHNOLOGIES</a></li>
+                <li><a href="#contactus">CONTACT US</a></li>
             </ul>
         </div>
         <div id="HOME">homw</div>
@@ -209,9 +296,40 @@
                 <div class="article">
                     <h2>Project-3</h2><img src="p3.jpg"></div>
             </div>
-        </div><br><br><br><br>
+        </div>
         <div class="technology">
-
+            <h2 id="techno">Technologies Used</h2>
+            <div class="box" id="box1">
+                <img src="html_image.png"><br>
+                <h4> Introduction to HTML</h4>
+                <p>HTML stands for Hyper Text Markup Language. It is used to design web pages using markup language. HTML is the combination of Hypertext and .....</p>
+                <a href="html_intro.html" alt="HTML" target="_blank" class="buttontype">Read More</a>
+            </div>
+            <div class="box" id="box1">
+                <img src="css_image.png"><br>
+                <h4>Introduction to CSS</h4>
+                <p>Cascading Style Sheets, fondly referred to as CSS, is a simple design language intended to simplify the process of making web pages presentable......</p>
+                <a href="css_intro.html" alt="CSS" target="_blank" class="buttontype">Read More</a>
+            </div>
+            <div class="box" id="box1">
+                <img src="js_image.png"><br>
+                <h4>Introduction to JavaScript</h4>
+                <p>JavaScript often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often ....</p>
+                <a href="js_intro.html" alt="JavaScript" target="_blank" class="buttontype">Read More</a>
+            </div>
+            <div class="box" id="box1">
+                <img src="bootstrap_image.jpg"><br>
+                <h4>Introduction to Bootstrap</h4>
+                <p>Bootstrap is a free and open-source tool collection for creating responsive websites and web applications.It is the most popular HTML, CSS, and ....</p>
+                <a href="bootstrap_intro.html" alt="Bootstrap" target="_blank" class="buttontype">Read More</a>
+            </div>
+        </div>
+        <div class="contact">
+            <h2 id="contactus">Contact Us</h2>
+            <div id="footer">
+                <h6><br>Website Template for Practical-8 &copy<a href="https://github.com/mishravimal99">Vimal Mishra</a>
+                    <br><a href="#">Back to top</a></h6>
+            </div>
         </div>
     </div>
 </body>
