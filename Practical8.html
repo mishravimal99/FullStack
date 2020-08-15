@@ -6,9 +6,214 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practical-8</title>
 </head>
+<style>
+    * {
+        padding: 0px;
+        margin: 0px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        color: black;
+    }
+    
+    #navbar {
+        display: flex;
+        list-style-type: none;
+        height: 80px;
+        width: 100%;
+        padding: 0;
+        overflow: hidden;
+        background-color: grey;
+        position: sticky;
+        top: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #navbar ul {
+        text-decoration: none;
+    }
+    
+    #navbar ul li {
+        display: inline-block;
+        float: left;
+        margin: 25px auto;
+        text-decoration: none;
+    }
+    
+    a {
+        display: inline-block;
+        padding: 15px 10px;
+        text-decoration: none;
+        font-weight: bold;
+        color: white;
+    }
+    
+    #navbar li a:hover {
+        background-color: white;
+        color: black;
+    }
+    
+    .banner {
+        background-image: url(emile-perron-xrVDYZRGdw4-unsplash.jpg);
+        width: 98%;
+        display: flex;
+        height: 100vh;
+        margin: 10px auto;
+    }
+    
+    h1 {
+        font-size: 50px;
+        color: white;
+        font-weight: bolder;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    
+    #HOME {
+        visibility: hidden;
+    }
+    
+    .team h2 {
+        margin-top: 80px;
+        color: black;
+        font-family: sans-serif;
+        font-weight: bold;
+        text-align: center;
+        font-size: 40px;
+    }
+    
+    .teamsection {
+        margin-top: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 40px;
+    }
+    
+    .teamimage {
+        height: 250px;
+        width: 20%;
+        border-radius: 200px;
+        margin: 25px;
+        float: left;
+        margin-bottom: 60px;
+    }
+    
+    .teamimage img {
+        height: 260px;
+        width: 100%;
+        border-radius: 200px;
+    }
+    
+    .Section-2 {
+        height: 520px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    
+    #maincontent h2,
+    p {
+        color: white;
+    }
+    
+    #maincontent {
+        margin-top: 40px;
+        height: 490px;
+        width: 48%;
+        background-color: gray;
+        float: left;
+        flex-direction: column;
+        display: flex;
+        margin-bottom: 20px;
+        margin-left: 5px;
+        padding: 15px;
+        text-align: justify;
+    }
+    
+    .articles {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    
+    .article {
+        height: 160px;
+        background-color: orange;
+        width: 48%;
+        display: flex;
+        margin-bottom: 20px;
+        flex-direction: column;
+        float: right;
+        text-align: center;
+    }
+    
+    .article img {
+        width: 100%;
+        height: 160px;
+    }
+    
+    .article h2 {
+        color: black;
+        font-size: 30px;
+        position: absolute;
+        top: 5;
+        left: 75%;
+    }
+    
+    .Section-2 h2 {
+        color: black;
+        font-family: sans-serif;
+        font-weight: bold;
+        text-align: center;
+        font-size: 40px;
+    }
+</style>
 
 <body>
+    <div id="container">
+        <div id="navbar">
+            <ul>
+                <li><a href="#HOME">HOME</a></li>
+                <li><a href="#about">ABOUT US</a></li>
+                <li><a href="#teamxp">TEAM</a></li>
+                <li><a href="/library">TECHNOLOGIES</a></li>
+                <li><a href="/testimonials">CONTACT US</a></li>
+            </ul>
+        </div>
+        <div id="HOME">homw</div>
+        <div class="banner">
+            <div class="banner-work">
+                <h1>PRACTICAL - 8</h1>
+            </div>
+        </div>
+        <div class="team">
+            <h2 id="teamxp">Team Members</h2>
+            <div class="teamsection">
+                <div class="teamimage"><img src="1.png"></div>
+                <div class="teamimage"><img src="2.png"></div>
+                <div class="teamimage"><img src="3.png"></div>
+                <div class="teamimage"><img src="9.png"></div>
+            </div>
+        </div>
+        <div class="Section-2">
+            <h2 id="about">About Us</h2>
+            <div class="main content" id="maincontent">
+                <h2>About Projects</h2><br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint corrupti tempore atque corporis inventore unde assumenda accusantium maiores beatae ipsum laboriosam sequi quibusdam facilis voluptate quod quas maxime, nostrum laborum? Lorem
+                    ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, consequuntur! Animi sint ex maxime iure! Temporibus voluptatem illo, assumenda libero iusto laborum sint accusantium? Eos debitis sed numquam eligendi facilis?
+                </p>
+            </div>
+            <div class="articles">
+                <div class="article">
+                    <h2>Project-1</h2><img src="p1.jpg"></div>
+                <div class="article">
+                    <h2>Project-2</h2><img src="p2.jpeg"></div>
+                <div class="article">
+                    <h2>Project-3</h2><img src="p3.jpg"></div>
+            </div>
+        </div>
+        <div class="technology">
 
+        </div>
+    </div>
 </body>
 
 </html>
