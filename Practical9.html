@@ -4,332 +4,867 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practical-9</title>
+    <title>Practical9</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .header {
+            background-color: tomato;
+            width: 100%;
+            height: 70px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        .header .menu {
+            list-style: none;
+            float: right;
+            padding: 0px 30px;
+        }
+        
+        .header ul li {
+            display: inline-block;
+            line-height: 70px;
+        }
+        
+        .header ul li a {
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: rgb(255, 255, 255);
+            padding: 5px 20px;
+            font-size: 25px;
+            transition: .4s;
+            margin-left: 50px;
+        }
+        
+        .header ul li a:hover,
+        .show-btn:hover,
+        .hide-btn:hover {
+            color: black;
+            background-color: rgb(255, 161, 145);
+        }
+        
+        .show-btn,
+        .hide-btn,
+        #chk {
+            color: white;
+            line-height: 70px;
+            font-size: 30px;
+            float: right;
+            padding: 0px 20px;
+            display: none;
+        }
+        
+        .sec5 .footer {
+            background-color: rgb(196, 102, 196);
+            color: white;
+            width: 100%;
+            text-align: center;
+            padding: 20px 0px;
+        }
+        
+        #head {
+            text-align: center;
+            font-size: 40px;
+            margin: 40px 0px;
+        }
+        
+        .sec1 {
+            width: 100%;
+            height: 560px;
+            margin-top: 20px;
+            background-image: url(../img/practical8bg.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .sec1 h1 {
+            color: white;
+            text-align: left;
+            padding: 40px 45px;
+            font-size: 60px;
+        }
+        
+        .sec2 {
+            width: 100%;
+        }
+        
+        .sec2::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
+        .cir img {
+            height: 250px;
+            width: 21%;
+            border-radius: 50%;
+            margin-left: 35px;
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .sec3::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
+        .left-bar {
+            background-color: coral;
+            color: white;
+            width: 50%;
+            height: 450px;
+            float: left;
+            padding: 10px;
+        }
+        
+        .left-bar p {
+            text-align: justify;
+            line-height: 125%;
+            padding: 10px;
+        }
+        
+        .left-bar h2 {
+            text-align: center;
+            padding-top: 10px;
+        }
+        
+        .right-bar {
+            height: 450px;
+            width: 48%;
+            float: right;
+        }
+        
+        .art {
+            width: 100%;
+            height: 31%;
+            margin-bottom: 15px;
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .art h2 {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+        }
+        
+        .art img {
+            width: 100%;
+            height: 150px;
+        }
+        
+        .sec4 {
+            margin: 15px auto;
+            width: 100%;
+        }
+        
+        .sec4::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
+        .box {
+            color: black;
+            width: 22%;
+            margin: 15px;
+            float: left;
+            border-radius: 8px;
+        }
+        
+        .box img {
+            width: 100%;
+            height: 180px;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        
+        .box h4 {
+            text-align: center;
+            margin: 0px 10px;
+            color: black;
+        }
+        
+        .box p {
+            text-align: justify;
+            margin: 10px;
+            line-height: 22px;
+        }
+        
+        .box a {
+            display: block;
+            margin: 0px auto;
+            border-radius: 7px;
+            background-color: red;
+            text-decoration: none;
+            text-align: center;
+            color: white;
+            padding: 10px;
+        }
+        
+        .box a:hover {
+            background-color: blue;
+            color: black;
+            font-weight: bold;
+        }
+        
+        @media (min-width: 880px) and (max-width: 1199px) {
+            html {
+                scroll-padding-top: 70px;
+                scroll-behavior: smooth;
+            }
+            .header {
+                background-color: tomato;
+                width: 100%;
+                height: 70px;
+                position: sticky;
+                top: 0;
+                z-index: 10;
+            }
+            .header .menu {
+                list-style: none;
+                float: right;
+                padding: 0px 30px;
+            }
+            .header ul li {
+                display: inline-block;
+                line-height: 70px;
+            }
+            .header ul li a {
+                text-decoration: none;
+                font-weight: bold;
+                text-transform: uppercase;
+                color: rgb(255, 255, 255);
+                padding: 5px 20px;
+                font-size: 25px;
+                transition: .4s;
+            }
+            .header ul li a:hover {
+                color: black;
+                background-color: rgb(255, 161, 145);
+            }
+            .show-btn,
+            .hide-btn,
+            #chk {
+                color: white;
+                line-height: 70px;
+                font-size: 30px;
+                float: right;
+                padding-right: 20px;
+                display: none;
+            }
+            .sec5 .footer {
+                background-color: rgb(196, 102, 196);
+                color: white;
+                width: 100%;
+                text-align: center;
+                padding: 20px 0px;
+            }
+            #head {
+                text-align: center;
+                font-size: 40px;
+                margin: 40px 0px;
+            }
+            .sec1 {
+                width: 100%;
+                height: 560px;
+                margin-top: 20px;
+                background-image: url(../img/practical8bg.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+            .sec1 h1 {
+                color: white;
+                text-align: left;
+                padding: 40px 45px;
+                font-size: 60px;
+            }
+            .sec2 {
+                width: 100%;
+            }
+            .sec2::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .cir img {
+                height: 250px;
+                width: 250px;
+                border-radius: 50%;
+                margin-left: 15%;
+                margin-bottom: 20px;
+                float: left;
+            }
+            .sec3::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .left-bar {
+                background-color: coral;
+                color: white;
+                width: 50%;
+                height: 450px;
+                float: left;
+                padding: 10px;
+            }
+            .left-bar p {
+                text-align: justify;
+                line-height: 125%;
+                padding: 10px;
+            }
+            .left-bar h2 {
+                text-align: center;
+                padding-top: 10px;
+            }
+            .right-bar {
+                height: 450px;
+                width: 48%;
+                float: right;
+            }
+            .art {
+                width: 100%;
+                height: 31%;
+                margin-bottom: 15px;
+                display: flex;
+                justify-items: center;
+                align-items: center;
+                position: relative;
+                overflow: hidden;
+            }
+            .art h2 {
+                position: absolute;
+                top: 5px;
+                right: 10px;
+            }
+            .art img {
+                width: 100%;
+                height: 150px;
+            }
+            .sec4 {
+                margin: 15px auto;
+                width: 100%;
+            }
+            .sec4::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .box {
+                color: black;
+                width: 40%;
+                margin-left: 50px;
+                float: left;
+                border-radius: 8px;
+            }
+            .box img {
+                width: 100%;
+                margin-bottom: 10px;
+                padding: 10px;
+            }
+            .box h4 {
+                text-align: center;
+                margin: 0px 10px;
+                color: black;
+            }
+            .box p {
+                text-align: justify;
+                margin: 10px;
+                font-size: 20px;
+                line-height: 30px;
+            }
+            .box a {
+                display: block;
+                margin: 0px auto;
+                border-radius: 7px;
+                background-color: red;
+                text-decoration: none;
+                text-align: center;
+                color: white;
+                padding: 10px;
+            }
+            .box a:hover {
+                background-color: blue;
+                color: black;
+                font-weight: bold;
+            }
+        }
+        
+        @media (min-width: 700px) and (max-width: 879px) {
+            html {
+                scroll-padding-top: 70px;
+                scroll-behavior: smooth;
+            }
+            .header {
+                background-color: tomato;
+                width: 100%;
+                height: 70px;
+                position: sticky;
+                top: 0;
+                z-index: 10;
+            }
+            .show-btn {
+                display: block;
+            }
+            .header .menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                background-color: #333;
+                text-align: center;
+                padding: 80px 0px;
+                line-height: normal;
+                transition: 0.7s;
+            }
+            .header ul li {
+                padding: 0px 100px;
+                display: block;
+            }
+            .header ul li a {
+                display: block;
+            }
+            #chk:checked~.menu {
+                right: 0;
+            }
+            .header ul li a:hover {
+                color: black;
+                background-color: rgb(255, 161, 145);
+            }
+            .hide-btn {
+                position: absolute;
+                top: 20px;
+                right: 30px;
+                display: block;
+            }
+            .sec5 .footer {
+                background-color: rgb(196, 102, 196);
+                color: white;
+                width: 100%;
+                text-align: center;
+                padding: 20px 0px;
+            }
+            #head {
+                text-align: center;
+                font-size: 40px;
+                margin: 40px 0px;
+            }
+            .sec1 {
+                width: 100%;
+                height: 560px;
+                margin-top: 20px;
+                background-image: url(../img/practical8bg.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+            .sec1 h1 {
+                color: white;
+                text-align: left;
+                padding: 40px 45px;
+                font-size: 60px;
+            }
+            .sec2 {
+                width: 100%;
+            }
+            .sec2::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .cir img {
+                height: 250px;
+                width: 250px;
+                border-radius: 50%;
+                margin-left: 10%;
+                margin-bottom: 20px;
+                float: left;
+            }
+            .sec3::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .left-bar {
+                background-color: coral;
+                color: white;
+                width: 100%;
+                height: 450px;
+                padding: 10px;
+                margin-bottom: 20px;
+                overflow: hidden;
+            }
+            .left-bar p {
+                text-align: justify;
+                line-height: 30px;
+                font-size: 20px;
+                padding: 10px;
+            }
+            .left-bar h2 {
+                text-align: center;
+                padding-top: 10px;
+            }
+            .right-bar {
+                height: 450px;
+                width: 100%;
+            }
+            .art {
+                width: 100%;
+                height: 31%;
+                margin-bottom: 15px;
+                display: flex;
+                justify-items: center;
+                align-items: center;
+                position: relative;
+                overflow: hidden;
+            }
+            .art h2 {
+                position: absolute;
+                top: 5px;
+                right: 10px;
+            }
+            .art img {
+                width: 100%;
+                height: 150px;
+            }
+            .sec4 {
+                margin: 15px auto;
+                width: 100%;
+            }
+            .sec4::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .box {
+                color: black;
+                width: 40%;
+                margin-left: 50px;
+                float: left;
+                border-radius: 8px;
+            }
+            .box img {
+                width: 100%;
+                margin-bottom: 10px;
+                padding: 10px;
+            }
+            .box h4 {
+                text-align: center;
+                margin: 0px 10px;
+                color: black;
+            }
+            .box p {
+                text-align: justify;
+                margin: 10px;
+                font-size: 20px;
+                line-height: 30px;
+            }
+            .box a {
+                display: block;
+                margin: 0px auto;
+                border-radius: 7px;
+                background-color: red;
+                text-decoration: none;
+                text-align: center;
+                color: white;
+                padding: 10px;
+            }
+            .box a:hover {
+                background-color: blue;
+                color: black;
+                font-weight: bold;
+            }
+        }
+        
+        @media (max-width: 699px) {
+            html {
+                scroll-padding-top: 70px;
+                scroll-behavior: smooth;
+            }
+            .header {
+                background-color: tomato;
+                width: 100%;
+                height: 70px;
+                position: sticky;
+                top: 0;
+                z-index: 10;
+            }
+            .show-btn {
+                display: block;
+            }
+            .header .menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                background-color: #333;
+                text-align: center;
+                padding: 80px 0px;
+                line-height: normal;
+                transition: 0.7s;
+            }
+            .header ul li {
+                /* padding: 0px 100px; */
+                display: block;
+            }
+            .header ul li a {
+                display: block;
+            }
+            #chk:checked~.menu {
+                right: 0;
+            }
+            .header ul li a:hover {
+                color: black;
+                background-color: rgb(255, 161, 145);
+            }
+            .hide-btn {
+                position: absolute;
+                top: 20px;
+                right: 30px;
+                display: block;
+            }
+            .sec5 .footer {
+                background-color: rgb(196, 102, 196);
+                color: white;
+                width: 100%;
+                text-align: center;
+                padding: 20px 0px;
+            }
+            #head {
+                text-align: center;
+                font-size: 40px;
+                margin: 40px 0px;
+            }
+            .sec1 {
+                width: 100%;
+                height: 300px;
+                margin-top: 20px;
+                background-image: url(../img/practical8bg.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+            .sec1 h1 {
+                color: white;
+                text-align: left;
+                padding: 40px 45px;
+                font-size: 60px;
+            }
+            .sec2 {
+                width: 90%;
+                margin-left: 10%;
+            }
+            .cir img {
+                height: 70%;
+                width: 70%;
+                border-radius: 50%;
+                margin-bottom: 20px;
+            }
+            .left-bar {
+                background-color: coral;
+                color: white;
+                width: 100%;
+                height: 450px;
+                padding: 10px;
+                margin-bottom: 30px;
+            }
+            .left-bar p {
+                text-align: justify;
+                line-height: 25px;
+                font-size: 20px;
+                padding: 10px;
+                overflow: hidden;
+            }
+            .left-bar h2 {
+                text-align: center;
+                padding-top: 10px;
+                /* margin: 10px 5px; */
+            }
+            .right-bar {
+                height: 450px;
+                width: 100%;
+            }
+            .art {
+                width: 100%;
+                height: 31%;
+                margin-bottom: 15px;
+                display: flex;
+                justify-items: center;
+                align-items: center;
+                position: relative;
+                overflow: hidden;
+            }
+            .art h2 {
+                position: absolute;
+                top: 5px;
+                right: 10px;
+            }
+            .art img {
+                width: 100%;
+                height: 150px;
+            }
+            .sec4 {
+                margin: 15px auto;
+                width: 100%;
+            }
+            .box {
+                color: black;
+                max-height: 500px;
+                width: 90%;
+                margin-left: 20px;
+                margin-bottom: 20px;
+                border-radius: 8px;
+                min-height: 50px;
+            }
+            .box img {
+                width: 100%;
+                height: 250px;
+                margin-bottom: 10px;
+                padding: 10px;
+            }
+            .box h4 {
+                text-align: center;
+                margin: 0px 10px;
+                color: black;
+            }
+            .box p {
+                text-align: justify;
+                margin: 10px;
+                font-size: 20px;
+                line-height: 30px;
+            }
+            .box a {
+                display: block;
+                margin: 0px auto;
+                border-radius: 7px;
+                /* width: 100%; */
+                background-color: red;
+                text-decoration: none;
+                text-align: center;
+                color: white;
+                padding: 10px;
+            }
+            .box a:hover {
+                background-color: blue;
+                color: black;
+                font-weight: bold;
+            }
+        }
+    </style>
 </head>
-<style>
-    * {
-        padding: 0px;
-        margin: 0px;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 30px;
-        color: black;
-    }
-    
-    #navbar {
-        display: flex;
-        list-style-type: none;
-        height: 80px;
-        width: 100%;
-        padding: 0;
-        overflow: hidden;
-        background-color: black;
-        position: sticky;
-        top: 0;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    #navbar ul {
-        text-decoration: none;
-    }
-    
-    #navbar ul li {
-        display: inline-block;
-        float: left;
-        padding: 20px;
-        margin: 25px auto;
-        text-decoration: none;
-    }
-    
-    a {
-        display: inline-block;
-        padding: 15px 10px;
-        text-decoration: none;
-        font-weight: bold;
-        color: white;
-    }
-    
-    #navbar li a:hover {
-        background-color: white;
-        color: black;
-    }
-    
-    .banner {
-        background-image: url(emile-perron-xrVDYZRGdw4-unsplash.jpg);
-        width: 98%;
-        display: flex;
-        height: 100vh;
-        margin: 10px auto;
-    }
-    
-    h1 {
-        font-size: 50px;
-        color: white;
-        font-weight: bolder;
-        margin-top: 20px;
-        margin-left: 20px;
-    }
-    
-    #HOME {
-        visibility: hidden;
-    }
-    
-    .team h2 {
-        margin-top: 80px;
-        color: black;
-        font-family: sans-serif;
-        font-weight: bold;
-        text-align: center;
-        font-size: 40px;
-    }
-    
-    .teamsection {
-        margin-top: 40px;
-        margin-left: 20px;
-        margin-right: 20px;
-        margin-bottom: 40px;
-    }
-    
-    .teamimage {
-        height: 250px;
-        width: 20%;
-        border-radius: 200px;
-        margin: 25px;
-        float: left;
-        margin-bottom: 60px;
-    }
-    
-    .teamimage img {
-        height: 260px;
-        width: 100%;
-        border-radius: 200px;
-    }
-    
-    .Section-2 {
-        height: 520px;
-        margin-bottom: 20px;
-        width: 100%;
-    }
-    
-    #maincontent h2,
-    p {
-        color: white;
-    }
-    
-    #maincontent {
-        margin-top: 40px;
-        height: 490px;
-        width: 48%;
-        background-color: gray;
-        float: left;
-        flex-direction: column;
-        display: flex;
-        margin-bottom: 20px;
-        margin-left: 5px;
-        padding: 15px;
-        text-align: justify;
-    }
-    
-    .articles {
-        margin-top: 40px;
-        margin-bottom: 20px;
-    }
-    
-    .article {
-        height: 160px;
-        background-color: orange;
-        width: 48%;
-        display: flex;
-        margin-bottom: 20px;
-        flex-direction: column;
-        float: right;
-        text-align: center;
-    }
-    
-    .article img {
-        width: 100%;
-        height: 160px;
-    }
-    
-    .article h2 {
-        color: black;
-        font-size: 30px;
-        position: absolute;
-        top: 5;
-        left: 75%;
-    }
-    
-    .Section-2 h2 {
-        color: black;
-        font-family: sans-serif;
-        font-weight: bold;
-        text-align: center;
-        font-size: 40px;
-    }
-    
-    #box1 {
-        width: 20%;
-        margin: 36px 18px;
-        padding: 15px;
-        background-color: white;
-        border-radius: 8px;
-        float: left;
-        height: 490px;
-    }
-    
-    body {
-        background-color: lightgrey;
-        font-family: Arial, Helvetica, sans-serif;
-        color: white;
-    }
-    
-    .box img {
-        width: 100%;
-        height: 180px;
-        border-radius: 8px;
-    }
-    
-    .box p {
-        color: black;
-        font-size: 20px;
-    }
-    
-    .buttontype {
-        background-color: red;
-        color: white;
-        border: 2px solid red;
-        border-radius: 8px;
-        height: 30px;
-        text-align: center;
-        text-decoration: none;
-        cursor: pointer;
-        display: inline-block;
-        padding: 10px 0px;
-        width: 100%;
-        margin: 10px auto;
-    }
-    
-    .box a:hover {
-        background-color: skyblue;
-        border-color: skyblue;
-        color: black;
-    }
-    
-    .box h4 {
-        color: black;
-        text-align: center;
-        margin: 15px 10px;
-    }
-    
-    .technology h2 {
-        color: black;
-        font-family: sans-serif;
-        font-weight: bold;
-        text-align: center;
-        font-size: 40px;
-    }
-    
-    .contact h2 {
-        color: black;
-        font-family: sans-serif;
-        font-weight: bold;
-        text-align: center;
-        font-size: 40px;
-    }
-    
-    #footer h6 {
-        text-align: center;
-        font-size: 15px;
-        border: solid pink;
-        height: 100px;
-        width: 98%;
-        background-color: pink;
-        margin-top: 30px;
-    }
-    
-    #footer a {
-        font-size: 15px;
-        text-decoration: underline;
-        color: black;
-    }
-</style>
 
 <body>
-    <div id="container">
-        <div id="navbar">
-            <ul>
-                <li><a href="#HOME">HOME</a></li>
-                <li><a href="#about">ABOUT US</a></li>
-                <li><a href="#teamxp">TEAM</a></li>
-                <li><a href="#techno">TECHNOLOGIES</a></li>
-                <li><a href="#contactus">CONTACT US</a></li>
+    <div class="container">
+        <div class="header">
+            <input type="checkbox" id="chk">
+            <label for="chk" class="show-btn">
+                <i class="fa fa-bars"></i>
+            </label>
+            <ul class="menu">
+                <li><a href="#top">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#technologies">Technologies</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <label for="chk" class="hide-btn">
+                    <i class="fa fa-times"></i>
+                </label>
             </ul>
+
         </div>
-        <div id="HOME">homw</div>
-        <div class="banner">
-            <div class="banner-work">
-                <h1>PRACTICAL - 8</h1>
+
+        <a name="top"></a>
+        <div class="sec1">
+            <h1>Practical-9</h1>
+        </div>
+
+        <a name="team"></a>
+        <div class="sec2">
+            <h1 id="head">Team Members</h1>
+            <div class="cir"><img src="../img/practical8-team1.png" alt="1"></div>
+            <div class="cir"><img src="../img/practical8-team2.png" alt="2"></div>
+            <div class="cir"><img src="../img/practical8-team1.png" alt="3"></div>
+            <div class="cir"><img src="../img/practical8-team4.png" alt="4"></div>
+        </div>
+
+        <a name="about"></a>
+        <div class="sec3">
+            <h1 id="head">About Us</h1>
+            <div class="left-bar">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur Esse sequi quisquam, Consequuntur corrupti molestias corporis alias fugiat expedita illo, consectetur suscipit earum. Non deleniti delectus amet, nobis voluptate debitis
+                    dicta unde aut voluptatibus provident qui voluptates cupiditate maxime. Maiores repellendus adipisci, dicta esse, sequi labore quibusdam rerum suscipit modi iusto dolore ipsam ducimus illo aspernatur molestiae distinctio explicabo
+                    quisquam nihil reprehenderit! Fugit quia omnis minima laudantium, magni et. Id, enim! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus architecto voluptatem labore dolorum eos eveniet expedita. Cum, magnam in. Iure blanditiis
+                    rem magni, eaque animi quidem pariatur impedit aperiam placeat ratione voluptate maiores ullam labore minima, inventore accusantium amet id dolor. Quia, ad! Voluptatem ipsa mollitia quis excepturi vero. Neque sint dolores expedita
+                    aperiam deleniti, veritatis minima incidunt tenetur repellendus harum! Molestias, magni enim. Dolore ut amet beatae ullam ipsum suscipit unde officia, est harum distinctio voluptate quasi nulla aperiam explicabo? Fuga voluptatibus
+                    suscipit, aperiam rem ullam doloremque ipsa explicabo, quidem assumenda natus dolore veritatis non. Amet nobis corporis dolorum?</p>
+
+            </div>
+            <div class="right-bar">
+                <div class="art">
+                    <img src="p1.jpg" alt="1">
+                </div>
+                <div class="art">
+                    <img src="p2.jpeg" alt="2">
+                </div>
+                <div class="art">
+                    <img src="p3.jpg" alt="3">
+                </div>
             </div>
         </div>
-        <div id="teamxp"></div>
-        <div class="team">
-            <h2>Team Members</h2>
-            <div class="teamsection">
-                <div class="teamimage"><img src="1.png"></div>
-                <div class="teamimage"><img src="2.png"></div>
-                <div class="teamimage"><img src="3.png"></div>
-                <div class="teamimage"><img src="9.png"></div>
-            </div>
-        </div>
-        <div class="Section-2">
-            <h2 id="about">About Us</h2>
-            <div class="main content" id="maincontent">
-                <h2>About Projects</h2><br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint corrupti tempore atque corporis inventore unde assumenda accusantium maiores beatae ipsum laboriosam sequi quibusdam facilis voluptate quod quas maxime, nostrum laborum? Lorem
-                    ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, consequuntur! Animi sint ex maxime iure! Temporibus voluptatem illo, assumenda libero iusto laborum sint accusantium? Eos debitis sed numquam eligendi facilis?
+
+        <a name="technologies"></a>
+        <div class="sec4">
+            <h1 id="head">Technologies Used</h1>
+            <div class="box">
+                <img class="tech" src="html_image.png" alt="">
+                <h4>Introduction to HTML</h4>
+                <p>HTML stands for Hyper Text Markup Language. HTML is the combination of Hypertext and Markup language. Markup language is used to define the text document within tag which defines the structure of web pages. This language is used to annotate
+                    text so that a machine can understand it
                 </p>
+                <a href="html_intro.html" target="_blank">Read More</a>
             </div>
-            <div class="articles">
-                <div class="article">
-                    <h2>Project-1</h2><img src="p1.jpg"></div>
-                <div class="article">
-                    <h2>Project-2</h2><img src="p2.jpeg"></div>
-                <div class="article">
-                    <h2>Project-3</h2><img src="p3.jpg"></div>
-            </div>
-        </div>
-        <div class="technology">
-            <h2 id="techno">Technologies Used</h2>
-            <div class="box" id="box1">
-                <img src="html_image.png"><br>
-                <h4> Introduction to HTML</h4>
-                <p>HTML stands for Hyper Text Markup Language. It is used to design web pages using markup language. HTML is the combination of Hypertext and .....</p>
-                <a href="html_intro.html" alt="HTML" target="_blank" class="buttontype">Read More</a>
-            </div>
-            <div class="box" id="box1">
-                <img src="css_image.png"><br>
+            <div class="box">
+                <img class="tech" src="css_image.png" alt="">
                 <h4>Introduction to CSS</h4>
-                <p>Cascading Style Sheets, fondly referred to as CSS, is a simple design language intended to simplify the process of making web pages presentable......</p>
-                <a href="css_intro.html" alt="CSS" target="_blank" class="buttontype">Read More</a>
+                <p>Cascading Style Sheets, fondly referred to as CSS, is a simply designed language intended to simplify the process of making page presentable. CSS allows you to apply styles to web pages. More importantly, CSS enables you to do this independent
+                    of the HTML that makes up each web page.</p>
+                <a href="css_intro.html" target="_blank">Read More</a>
             </div>
-            <div class="box" id="box1">
-                <img src="js_image.png"><br>
-                <h4>Introduction to JavaScript</h4>
-                <p>JavaScript often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often ....</p>
-                <a href="js_intro.html" alt="JavaScript" target="_blank" class="buttontype">Read More</a>
+            <div class="box">
+                <img class="tech" src="js_image.png" alt="">
+                <h4>Introduction to JS</h4>
+                <p>JavaScript is a lightweight, cross-platform and interpreted scripting language. It is well-known for the development of web pages, many non-browser environments also use it. JavaScript can be used for Client-side developments as well as
+                    Server-side developments. It contains a lot of useful libraries</p>
+                <a href="js_intro.html" target="_blank">Read More</a>
             </div>
-            <div class="box" id="box1">
-                <img src="bootstrap_image.jpg"><br>
-                <h4>Introduction to Bootstrap</h4>
-                <p>Bootstrap is a free and open-source tool collection for creating responsive websites and web applications.It is the most popular HTML, CSS, and ....</p>
-                <a href="bootstrap_intro.html" alt="Bootstrap" target="_blank" class="buttontype">Read More</a>
+            <div class="box">
+                <img class="tech" src="bootstrap_image.jpg">
+                <h4>Introduction to bootstrap</h4>
+                <p>bootstrap is a free and open-source tool collection for creating responsive websites and web applications. It is the most popular HTML, CSS, and JavaScript framework for developing responsive, It solves many problems which we had once,
+                    one of which is the cross-browser problem.</p>
+                <a href="bootstrap_intro.html" target="_blank">Read More</a>
             </div>
         </div>
-        <div class="contact">
-            <h2 id="contactus">Contact Us</h2>
-            <div id="footer">
-                <h6><br>Website Template for Practical-8 &copy<a href="https://github.com/mishravimal99">Vimal Mishra</a>
-                    <br><a href="#">Back to top</a></h6>
+
+        <a name="contact"></a>
+        <div class="sec5">
+            <h1 id="head">Contact</h1>
+            <div class="footer">
+                <h3>Website Template for Practical-8 &copy; <a href="https://www.linkedin.com/in/vimal-mishra-95462b187/">Vimal</a></h3>
+                <br>
+                <h4><a href="#">Back to top</a></h4>
             </div>
         </div>
     </div>
