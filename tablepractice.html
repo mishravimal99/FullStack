@@ -12,18 +12,27 @@
         
         table,
         td,
-        tr {
+        tr,
+        th {
             border: 2px solid;
+            padding: 8px;
+            text-align: center;
+        }
+        
+        caption {
+            caption-side: bottom;
+            color: orangered;
         }
     </style>
 </head>
 
 <body>
-    <table>
+    <table align="center">
+        <caption>List of Students</caption>
         <tr>
-            <td>Name</td>
-            <td>Section</td>
-            <td>Roll No</td>
+            <th width=100>Name</th>
+            <th width=50>Section</th>
+            <th width=60>Roll No</th>
         </tr>
         <tr>
             <td>Vimal </td>
@@ -31,14 +40,17 @@
             <td>61</td>
         </tr>
         <tr>
-            <td>Jeevu</td>
+            <td rowspan="2">Jeevu</td>
             <td>B</td>
             <td>19</td>
         </tr>
         <tr>
-            <td>Darksider</td>
             <td>C</td>
             <td>28</td>
+        </tr>
+        <tr>
+            <td colspan="2">Result</td>
+            <td>All Pass</td>
         </tr>
 
     </table>
