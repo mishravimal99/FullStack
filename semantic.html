@@ -53,6 +53,10 @@
             width: 100%;
             height: 80vh;
             background-color: skyblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
         }
         
         section.sec-1 {
@@ -93,7 +97,51 @@
             width: 45%;
             float: right;
             height: 500px;
-            background-color: goldenrod;
+            /*background-color: gold;*/
+            display: flex;
+            flex-direction: column;
+        }
+        
+        section.sec-2 aside .rightsidebar {
+            width: 100%;
+            background-color: gold;
+            height: 33%;
+            margin-bottom: 5%;
+        }
+        
+        section.sec-2 aside #lastsidebar {
+            margin-bottom: 0;
+        }
+        
+        section.sec-3 {
+            width: 100%;
+            height: 300px;
+            display: flex;
+            justify-content: space-evenly;
+            align-content: center;
+            margin-top: 15px;
+        }
+        
+        section.sec-3 .grid {
+            width: 20%;
+            height: 100%;
+            background-color: red;
+        }
+        
+        footer {
+            margin-top: 15px;
+            background-color: pink;
+            widows: 100px;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+        }
+        
+        h1 {
+            text-align: center;
+            padding: 15px;
         }
     </style>
 </head>
@@ -112,26 +160,32 @@
             </nav>
         </header>
         <main>
-            <section class="banner">
-
-            </section>
+            <section class="banner">Banner</section>
+            <h1>Section-1</h1>
             <section class="sec-1">
                 <div class="circle"></div>
                 <div class="circle"></div>
                 <div class="circle"></div>
                 <div class="circle"></div>
             </section>
+            <h1>Section-2</h1>
             <section class="sec-2">
                 <article></article>
-                <aside></aside>
+                <aside>
+                    <div class="rightsidebar"></div>
+                    <div class="rightsidebar"></div>
+                    <div class="rightsidebar" id="lastsidebar"></div>
+                </aside>
             </section>
+            <h1>Section-3</h1>
             <section class="sec-3">
-
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
             </section>
         </main>
-        <footer>
-
-        </footer>
+        <footer>Footer</footer>
     </div>
 </body>
 
