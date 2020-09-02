@@ -16,13 +16,62 @@
         body {
             min-width: 100%;
             background-color: lightgrey;
+            font-family: Arial, Helvetica, sans-serif;
         }
         
         .wrapper {
             width: 600px;
             background-color: #fff;
             padding: 10px;
-            margin: 20px;
+            margin: 20px auto;
+        }
+        
+        .custom-table {
+            width: 100%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        
+        .basic {
+            background-color: #c1dcb7;
+        }
+        
+        .plus {
+            background-color: #bad6c8;
+        }
+        
+        .deluxe {
+            background-color: #bbd3dc;
+        }
+        
+        .pro {
+            background-color: #d5e4bc;
+        }
+        
+        .custom-table td,
+        .custom-table th {
+            width: 150px;
+            padding: 8px 5px;
+            text-align: center;
+            border-right: 2px solid white;
+            border-left: 2px solid white;
+        }
+        
+        .custom-table th {
+            height: 70px;
+            color: #64548f;
+            font-size: 28px;
+            margin-right: 10px;
+        }
+        
+        i {
+            color: #64548f;
+            font-size: 28px;
+            margin-right: 10px;
+        }
+        
+        tbody tr:nth-child(odd) {
+            background-color: #fff;
         }
         
         img {
@@ -116,6 +165,11 @@
                     <td><img src="right_tick.png" alt="Correct"></td>
                 </tr>
             </tbody>
+            <tfoot>
+                <tr>
+                    <td><a href="#">Sign Up</a></td>
+                </tr>
+            </tfoot>
         </table>
     </div>
 </body>
