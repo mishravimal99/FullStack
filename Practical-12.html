@@ -7,6 +7,24 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <title>Practical-12</title>
     <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            min-width: 100%;
+            background-color: lightgrey;
+        }
+        
+        .wrapper {
+            width: 600px;
+            background-color: #fff;
+            padding: 10px;
+            margin: 20px;
+        }
+        
         img {
             height: 20px;
             width: 30px;
@@ -15,85 +33,91 @@
 </head>
 
 <body>
-    <h2>Select Your Plan</h2>
-    <table>
-        <thead>
-            <tr>
-                <th><i class="fa fa-building"></i>Basic</th>
-                <th><i class="fa fa-superpowers"></i>Plus</th>
-                <th><i class="fa fa-telegram"></i>Deluxe</th>
-                <th><i class="fa fa-tachometer"></i>Pro</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Rs.500/-</td>
-                <td>Rs.1500/-</td>
-                <td>Rs.2500/-</td>
-                <td>Rs.3500/-</td>
-            </tr>
-            <tr>
-                <td>50 pages</td>
-                <td>70 pages</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
-            </tr>
-            <tr>
-                <td>3 users</td>
-                <td>5 users</td>
-                <td>10 users</td>
-                <td>Unlimited</td>
-            </tr>
-            <tr>
-                <td>10 Sites</td>
-                <td>25 Sites</td>
-                <td>100 Sites</td>
-                <td>Unlimited</td>
-            </tr>
-            <tr>
-                <td>50 MB</td>
-                <td>100 MB</td>
-                <td>1 GB</td>
-                <td>5 GB</td>
-            </tr>
-            <tr>
-                <td>included</td>
-                <td>included</td>
-                <td>included</td>
-                <td>included</td>
-            </tr>
-            <tr>
-                <td><img src="right_tick.png" alt="Correct"></td>
-                <td><img src="right_tick.png" alt="Correct"></td>
-                <td><img src="right_tick.png" alt="Correct"></td>
-                <td><img src="right_tick.png" alt="Correct"></td>
-            </tr>
-            <tr>
-                <td><img src="wrong_tick.png" alt="Correct"></td>
-                <td><img src="right_tick.png" alt="Correct"></td>
-                <td><img src="right_tick.png" alt="Correct"></td>
-                <td><img src="right_tick.png" alt="Correct"></td>
-            </tr>
-            <tr>
-                <td><img src="wrong_tick.png" alt="Correct"></td>
-                <td><img src="right_tick.png" alt="Correct"></td>
-                <td><img src="right_tick.png" alt="Correct"></td>
-                <td><img src="right_tick.png" alt="Correct"></td>
-            </tr>
-            <tr>
-                <td><img src="wrong_tick.png" alt="Correct"></td>
-                <td><img src="wrong_tick.png" alt="Correct"></td>
-                <td><img src="right_tick.png" alt="Correct"></td>
-                <td><img src="right_tick.png" alt="Correct"></td>
-            </tr>
-            <tr>
-                <td><img src="wrong_tick.png" alt="Correct"></td>
-                <td><img src="wrong_tick.png" alt="Correct"></td>
-                <td><img src="wrong_tick.png" alt="Correct"></td>
-                <td><img src="right_tick.png" alt="Correct"></td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="wrapper">
+        <h2>Select Your Plan</h2>
+        <table class="custom-table">
+            <colgroup class="basic"></colgroup>
+            <colgroup class="plus"></colgroup>
+            <colgroup class="deluxe"></colgroup>
+            <colgroup class="pro"></colgroup>
+            <thead>
+                <tr>
+                    <th><i class="fa fa-building"></i>Basic</th>
+                    <th><i class="fa fa-superpowers"></i>Plus</th>
+                    <th><i class="fa fa-telegram"></i>Deluxe</th>
+                    <th><i class="fa fa-tachometer"></i>Pro</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Rs.500/-</td>
+                    <td>Rs.1500/-</td>
+                    <td>Rs.2500/-</td>
+                    <td>Rs.3500/-</td>
+                </tr>
+                <tr>
+                    <td>50 pages</td>
+                    <td>70 pages</td>
+                    <td>Unlimited</td>
+                    <td>Unlimited</td>
+                </tr>
+                <tr>
+                    <td>3 users</td>
+                    <td>5 users</td>
+                    <td>10 users</td>
+                    <td>Unlimited</td>
+                </tr>
+                <tr>
+                    <td>10 Sites</td>
+                    <td>25 Sites</td>
+                    <td>100 Sites</td>
+                    <td>Unlimited</td>
+                </tr>
+                <tr>
+                    <td>50 MB</td>
+                    <td>100 MB</td>
+                    <td>1 GB</td>
+                    <td>5 GB</td>
+                </tr>
+                <tr>
+                    <td>included</td>
+                    <td>included</td>
+                    <td>included</td>
+                    <td>included</td>
+                </tr>
+                <tr>
+                    <td><img src="right_tick.png" alt="Correct"></td>
+                    <td><img src="right_tick.png" alt="Correct"></td>
+                    <td><img src="right_tick.png" alt="Correct"></td>
+                    <td><img src="right_tick.png" alt="Correct"></td>
+                </tr>
+                <tr>
+                    <td><img src="wrong_tick.png" alt="Correct"></td>
+                    <td><img src="right_tick.png" alt="Correct"></td>
+                    <td><img src="right_tick.png" alt="Correct"></td>
+                    <td><img src="right_tick.png" alt="Correct"></td>
+                </tr>
+                <tr>
+                    <td><img src="wrong_tick.png" alt="Correct"></td>
+                    <td><img src="right_tick.png" alt="Correct"></td>
+                    <td><img src="right_tick.png" alt="Correct"></td>
+                    <td><img src="right_tick.png" alt="Correct"></td>
+                </tr>
+                <tr>
+                    <td><img src="wrong_tick.png" alt="Correct"></td>
+                    <td><img src="wrong_tick.png" alt="Correct"></td>
+                    <td><img src="right_tick.png" alt="Correct"></td>
+                    <td><img src="right_tick.png" alt="Correct"></td>
+                </tr>
+                <tr>
+                    <td><img src="wrong_tick.png" alt="Correct"></td>
+                    <td><img src="wrong_tick.png" alt="Correct"></td>
+                    <td><img src="wrong_tick.png" alt="Correct"></td>
+                    <td><img src="right_tick.png" alt="Correct"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>
