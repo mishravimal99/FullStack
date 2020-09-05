@@ -7,17 +7,81 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <title>Practical-11</title>
 </head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        min-width: 100%;
+        background-color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    table {
+        border-collapse: collapse;
+    }
+    
+    table,
+    tr,
+    th,
+    td {
+        border: 2px solid;
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+        border-collapse: collapse;
+    }
+    
+    tbody tr:hover {
+        background-color: orangered;
+        color: aliceblue;
+    }
+    
+    a {
+        font-size: 14px;
+        color: green;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        color: blue;
+        text-decoration: underline;
+    }
+    
+    .custom-table {
+        width: 80%;
+        margin: 10px auto;
+        border-collapse: collapse;
+    }
+    
+    .heading {
+        background-color: midnightblue;
+        color: white;
+    }
+    
+    .fa-pencil:hover {
+        color: blue;
+    }
+    
+    .fa-trash:hover {
+        color: red;
+    }
+</style>
 
 <body>
-    <table>
+    <table class="custom-table">
 
         <thead>
-            <th>FullStack Live Project Book</th>
+            <th class="heading" colspan="5">FullStack Live Project Book</th>
             <tr>
                 <th>#</th>
                 <th>Practical Name</th>
-                <th>Link</th>
-                <th>Status</th>
+                <th width="120">Link</th>
+                <th width="120">Status</th>
                 <th>Tools</th>
             </tr>
         </thead>
