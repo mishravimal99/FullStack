@@ -36,7 +36,9 @@
         
         .content {
             width: 100%;
+            float: right;
             padding: 20px;
+            transition: 0.7s;
         }
         
         .content img {
@@ -58,6 +60,8 @@
             position: fixed;
             top: 70px;
             background-color: #353b48;
+            left: -100%;
+            transition: 0.7s;
         }
         
         .sidebar ul {
@@ -68,17 +72,71 @@
             border-bottom: 2px solid rgba(255, 255, 255, .1)
         }
         
-        .sidebar ul li {
+        .sidebar ul li a {
             display: block;
             text-decoration: none;
             color: white;
             font-size: 20px;
             font-family: Arial, Helvetica, sans-serif;
             padding: 15px 25px;
+            transition: 0.4s;
         }
         
-        a i {
-            margin-right: 15px;
+        span {
+            margin-left: 15px;
+        }
+        
+        .sidebar ul li a:hover {
+            border-left: 5px solid white;
+        }
+        
+        .social {
+            margin-top: 200px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            font-size: 30px;
+            border-top: 2px solid rgb(255, 255, 255, 0.1);
+            border-bottom: 2px solid rgb(255, 255, 255, 0.1);
+            padding: 15px 25px;
+        }
+        
+        i {
+            font-size: 30px;
+            color: white;
+        }
+        
+        .show-btn,
+        .hide-btn {
+            font-size: 35px;
+            color: white;
+            position: fixed;
+            top: 20px;
+            left: 50px;
+        }
+        
+        .hide-btn {
+            opacity: 0;
+        }
+        
+        #chk:checked~.sidebar {
+            left: 0;
+        }
+        
+        #chk:checked~.show-btn {
+            opacity: 0;
+        }
+        
+        #chk:checked~.hide-btn {
+            opacity: 1;
+        }
+        
+        #chk:checked~.content {
+            width: 80%;
+        }
+        
+        #chk {
+            visibility: hidden;
         }
     </style>
 </head>
@@ -88,6 +146,13 @@
         <img src="cropped-fullstack-logo-full-colour-icon-only.png" alt="">
         <h1>FULLSTACK</h1>
     </div>
+    <input type="checkbox" name="" id="chk">
+    <label for="chk" class="show-btn">
+        <i class="fa fa-bars"></i>
+    </label>
+    <label for="chk" class="hide-btn">
+        <i class="fa fa-times"></i>
+    </label>
     <div class="content">
         <img src="practical10content.jpg" alt="">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum modi, tempore quisquam iusto iste harum impedit accusantium eius nihil doloremque non provident optio voluptate nesciunt. Molestias a labore beatae excepturi tenetur minima suscipit
@@ -125,6 +190,11 @@
                 <a href="#"><i class="fa fa-id-card"><span>Contact</span></i></a>
             </li>
         </ul>
+        <div class="social">
+            <a href=""><i class="fa fa-facebook"></i></a>
+            <a href=""><i class="fa fa-youtube"></i></a>
+            <a href=""><i class="fa fa-instagram"></i></a>
+        </div>
     </div>
 </body>
 
