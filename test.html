@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+    <title>Document</title>
+</head>
+<style>
+    p:nth-child(2),
+    p:nth-child(3) {
+        color: red;
+    }
+    
+    p:empty {
+        height: 20px;
+        width: 400px;
+        background-color: blue;
+    }
+    
+    p:only-child {
+        color: green;
+    }
+    
+    p:first-child::first-letter {
+        font-size: 100px;
+        color: blue;
+    }
+    
+    p:only-child::before {
+        font-family: 'FontAwesome';
+        content: '\f13d';
+        height: 10px;
+        display: inline-block;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <p>This is a paragraph</p>
+        <p></p>
+        <p>This is a paragraph</p>
+        <p>This is a paragraph</p>
+        <div>
+            <p>This is a paragraph</p>
+        </div>
+    </div>
+</body>
+
+</html>
