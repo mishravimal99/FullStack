@@ -280,7 +280,7 @@ input[type=password] {
 }
 
 .form-container-t3 input[type=submit]:hover {
-    background: linear-gradient(to right, orange, red);
+    background: rgb(48, 42, 42);
 }
 
 .form-container-t3 p#p4 {
