@@ -225,11 +225,9 @@ input[type=checkbox] {
 }
 
 .form-header-t3 {
-    width: 100%;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    height: 100px;
-    background: linear-gradient(to right, orange, red);
+    background-color: #fff;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -237,15 +235,9 @@ input[type=checkbox] {
 }
 
 .form-header-t3 h1 {
-    color: white;
+    color: black;
     font-size: 20px;
     padding: 10px 0px;
-}
-
-.form-header-t3 .social i {
-    color: white;
-    font-size: 20px;
-    padding: 15px 10px;
 }
 
 .form-container-t3 {
@@ -270,31 +262,45 @@ input[type=password] {
 
 .form-container-t3 p {
     font-size: 12px;
-    color: grey;
+    color: #3498db;
     padding: 20px 0px;
     text-align: right;
 }
 
-.form-container-t3 p b {
-    color: black;
-}
-
-input[type=submit] {
+.form-container-t3 input[type=submit] {
     outline: none;
     border: none;
     border-radius: 20px;
-    background-color: rgb(48, 42, 42);
+    display: block;
+    width: 100%;
+    background: linear-gradient(to right, skyblue, blue);
     color: white;
     padding: 10px 20px;
-    margin-top: 25px;
+    margin-top: 0px;
 }
 
-input[type=submit]:hover {
+.form-container-t3 input[type=submit]:hover {
     background: linear-gradient(to right, orange, red);
 }
 
 .form-container-t3 p#p4 {
-    display: inline-block;
-    margin-left: 10px;
-    font-size: 11px;
+    color: black;
+    text-align: center;
+    margin-top: -5px;
+}
+
+.form-footer-t3 {
+    display: flex;
+    justify-content: center;
+}
+
+.form-footer-t3 .social i {
+    color: #3498db;
+    font-size: 20px;
+    width: 70px;
+    padding: 10px 10px;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: -15px;
+    box-shadow: 2px 2px 5px #3498db;
 }
