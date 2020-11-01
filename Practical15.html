@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Practical-15</title>
+</head>
+
+<body>
+    <h1>COUNTER</h1>
+    <div id="container">
+        <button id="decr" onclick="dec()">-</button>
+        <span id="number">0</span>
+        <button onclick="inc()">+</button>
+    </div>
+    <script>
+        var counter = 0;
+        var decr = document.getElementById("decr");
+        decr.disabled = true;
+
+        function dec() {
+            counter = counter - 1;
+            document.getElementById("number").innerHTML = counter;
+            if (counter == 0) {
+                decr.disabled = true;
+            }
+        }
+
+        function inc() {
+            decr.disabled = false;
+            counter = counter + 1;
+            document.getElementById("number").innerHTML = counter;
+        }
+    </script>
+</body>
+
+</html>
