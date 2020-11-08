@@ -128,12 +128,10 @@
         todolist.onclick = deletecheck;
 
         function create(e) {
+            e.preventDefault();
+            var newDiv = document.createElement("div");
+            newDiv.classList.add("todo");
             if (todoInput.value != "") {
-                e.preventDefault();
-
-                var newDiv = document.createElement("div");
-                newDiv.classList.add("todo");
-
                 var newLi = document.createElement("li");
                 newLi.classList.add("todo-item");
                 newLi.innerHTML = todoInput.value;
@@ -159,12 +157,12 @@
         function deletecheck(e) {
             var item = e.target;
 
-            if (item.classList[0] === "delete-btn") {
+            if (item.classList[0] == "delete-btn") {
                 var parent = item.parentElement;
                 parent.remove();
             }
 
-            if (item.classList[0] === "cmplt-btn") {
+            if (item.classList[0] == "cmplt-btn") {
                 var parent = item.parentElement;
                 parent.classList.toggle("completed");
             }
