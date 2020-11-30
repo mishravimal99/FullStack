@@ -220,7 +220,7 @@
         }
 
         function isUserValid(uservalue) {
-            return /^([\w\d]+)$/.test(uservalue);
+            return /^[a-z0-9]{4,24}$/.test(uservalue);
         }
 
         function showFail(input, msg) {
