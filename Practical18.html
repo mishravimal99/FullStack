@@ -131,28 +131,28 @@
                 <input type="text" id="user" placeholder="Enter Username">
                 <i class="fa fa-check-circle"></i>
                 <i class="fas fa-exclamation-circle"></i>
-                <small id="usermsg">Error msg</small>
+                <small>Error msg</small>
             </div>
             <div class="control">
                 <label for="email">Email ID</label>
                 <input type="email" id="email" placeholder="Enter Email">
                 <i class="fa fa-check-circle"></i>
                 <i class="fas fa-exclamation-circle"></i>
-                <small id="emailmsg">Error msg</small>
+                <small>Error msg</small>
             </div>
             <div class="control">
                 <label for="Password">Password</label>
                 <input type="password" id="Password" placeholder="Enter Password">
                 <i class="fa fa-check-circle"></i>
                 <i class="fas fa-exclamation-circle"></i>
-                <small id="passwordmsg" class="msg1">Error msg</small>
+                <small>Error msg</small>
             </div>
             <div class="control">
-                <label for="Password2">Confirm Password</label>
+                <label for="Password2">Password Again</label>
                 <input type="password" id="Password2" placeholder="Re-Enter Password">
                 <i class="fa fa-check-circle"></i>
                 <i class="fas fa-exclamation-circle"></i>
-                <small id="password2msg" class="msg2">Error msg</small>
+                <small>Error msg</small>
             </div>
             <div id="btn"><button type="submit">Submit</button></div>
         </form>
@@ -214,7 +214,7 @@
         }
 
         function isUserValid(uservalue) {
-            return /^[a-z0-9]+$/.test(uservalue);
+            return /^[a-z0-9]{1,}$/.test(uservalue);
         }
 
         function showFail(input, msg) {
