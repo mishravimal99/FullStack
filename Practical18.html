@@ -191,7 +191,7 @@
             if (uservalue === '') {
                 showFail(user, "*UserName cannot be blank");
             } else if (!isUserValid(uservalue)) {
-                showFail(user, "*UserName Not Contain Special Characters");
+                showFail(user, "*UserName is not valid");
             } else {
                 showSuccess(user);
             }
@@ -220,7 +220,7 @@
         }
 
         function isUserValid(uservalue) {
-            return /^[a-z0-9]{4,24}$/.test(uservalue);
+            return /^[a-z0-9]+$/.test(uservalue);
         }
 
         function showFail(input, msg) {
