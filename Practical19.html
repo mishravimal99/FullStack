@@ -123,7 +123,7 @@
 <body>
     <div class="container">
         <form id="form1">
-            <h3>CREATE ACCOUNT</h3>
+            <h2>CREATE ACCOUNT</h2>
             <input type="text" placeholder="Enter Email">
             <input type="text" placeholder="Enter Password">
             <input type="text" placeholder="Enter Password Again">
@@ -133,8 +133,8 @@
         </form>
 
         <form id="form2">
-            <h3>SOCIAL LINKS</h3>
-            <input type="text" placeholder="Twitter">
+            <h2>SOCIAL LINKS</h2>
+            <input type="text" placeholder="Medium">
             <input type="text" placeholder="Github">
             <input type="text" placeholder="Linked In">
             <div class="btn-box">
@@ -144,7 +144,7 @@
         </form>
 
         <form id="form3">
-            <h3>PERSONAL INFORMATION</h3>
+            <h2>PERSONAL INFORMATION</h2>
             <input type="text" placeholder="First Name">
             <input type="text" placeholder="Last Name">
             <input type="text" placeholder="Mobile Number">
@@ -162,6 +162,37 @@
         </div>
     </div>
     <script>
+        const form1 = document.getElementById('form1');
+        const form2 = document.getElementById('form2');
+        const form3 = document.getElementById('form3');
+
+        const next1 = document.getElementById('next1');
+        const next2 = document.getElementById('next2');
+        const back1 = document.getElementById('back1');
+        const back2 = document.getElementById('back2');
+
+        const progress = document.getElementById('progress');
+
+        next1.onclick = function() {
+            form1.style.left = '-450px';
+            form2.style.left = '40px';
+            progress.style.width = "240px";
+        };
+        back1.onclick = function() {
+            form1.style.left = '40px';
+            form2.style.left = '450px';
+            progress.style.width = "120px";
+        };
+        next2.onclick = function() {
+            form2.style.left = '-450px';
+            form3.style.left = '40px';
+            progress.style.width = "360px";
+        };
+        back2.onclick = function() {
+            form2.style.left = '40px';
+            form3.style.left = '450px';
+            progress.style.width = "240px";
+        };
     </script>
 </body>
 
